@@ -1,7 +1,8 @@
 FROM node:5
 
-ENV WATCHDIR ./
+ENV WATCHDIR /files
 ENV PORT 8080
+EXPOSE 8080
 
 RUN mkdir /app
 WORKDIR /app

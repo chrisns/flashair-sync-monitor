@@ -1,0 +1,8 @@
+version: '2'
+services:
+  api:
+    build: flashair-sync-monitor-api
+    volumes:
+      - ./files:/files
+    ports:
+      - "8080:8080"
