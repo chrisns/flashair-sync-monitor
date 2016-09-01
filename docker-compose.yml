@@ -3,13 +3,13 @@ services:
   api:
     build: flashair-sync-monitor-api
     volumes:
-      - ./files:/files
+      - "${files}:/files"
     ports:
-      - "8080:8080"
+      - "${PORT}:8080"
 
   flashairwatch:
     build: flashair-sync-monitor-watcher
     environment:
-      - FLASH_AIR_IP=192.168.0.123
+      - "FLASH_AIR_IP=${FLASH_AIR_IP}"
     volumes:
-      - ./files:/files
+      - "${files}:/files"
