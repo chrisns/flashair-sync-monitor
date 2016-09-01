@@ -7,6 +7,11 @@ services:
     ports:
       - "${PORT}:8080"
 
+  frontend:
+    build: flashair-sync-monitor-ionic
+    ports:
+      - "${PORT}:8080"
+
   flashairwatch:
     build: flashair-sync-monitor-watcher
     environment:

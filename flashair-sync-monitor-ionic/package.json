@@ -62,6 +62,7 @@
   "name": "imagegal",
   "description": "imagegal: An Ionic project",
   "scripts": {
-    "start": "ionic serve"
+    "start": "ionic serve",
+    "build": "ionic build browser"
   }
 }
