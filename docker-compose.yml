@@ -5,12 +5,12 @@ services:
     volumes:
       - "${files}:/files"
     ports:
-      - "${PORT}:8080"
+      - "${BE_PORT}:8080"
 
   frontend:
     build: flashair-sync-monitor-ionic
     ports:
-      - "${PORT}:8080"
+      - "${FE_PORT}:80"
 
   flashairwatch:
     build: flashair-sync-monitor-watcher

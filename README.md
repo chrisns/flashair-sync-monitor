@@ -19,5 +19,6 @@ FLASH_AIR_IP=192.168.0.123 PORT=8080 FILES_DIR=./files docker-compose up
 | Environment variable | Meaning |
 | --- | --- |
 | FLASH_AIR_IP | IP address of your flashair SD card |
-| PORT | Port to run the web service on |
+| BE_PORT | Port to run the BE web service on |
+| FE_PORT | Port to run the FE browser web service on |
 | FILES_DIR | Path to where you want the files to go |
