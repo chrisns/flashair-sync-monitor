@@ -47,8 +47,21 @@
       "platform": "ios",
       "version": "",
       "locator": "ios"
+    },
+    {
+      "platform": "android",
+      "version": "",
+      "locator": "android"
+    },
+    {
+      "platform": "browser",
+      "version": "",
+      "locator": "browser"
     }
   ],
   "name": "imagegal",
-  "description": "imagegal: An Ionic project"
+  "description": "imagegal: An Ionic project",
+  "scripts": {
+    "start": "ionic serve"
+  }
 }
