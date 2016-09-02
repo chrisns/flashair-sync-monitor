@@ -1,0 +1,9 @@
+FROM beevelop/android-nodejs:latest
+
+RUN mkdir /app
+WORKDIR /app
+COPY package.json package.json
+RUN npm install
+ENV PATH /app/node_modules/.bin:$PATH
+COPY . .
+RUN npm run build-android

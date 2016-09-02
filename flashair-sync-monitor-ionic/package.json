@@ -63,6 +63,7 @@
   "description": "imagegal: An Ionic project",
   "scripts": {
     "start": "ionic serve",
-    "build": "ionic build browser"
+    "build": "ionic build browser",
+    "build-android": "ionic build android"
   }
 }

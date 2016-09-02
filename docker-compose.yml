@@ -3,18 +3,29 @@ services:
   api:
     build: flashair-sync-monitor-api
     volumes:
-      - "${files}:/files"
+      - ${FILES_DIR}:/files
     ports:
-      - "${BE_PORT}:8080"
+      - ${BE_PORT}:8080
+    restart: always
 
   frontend:
     build: flashair-sync-monitor-ionic
     ports:
-      - "${FE_PORT}:80"
+      - ${FE_PORT}:80
+    restart: always
+
+  build-android:
+    build:
+      context: flashair-sync-monitor-ionic
+      dockerfile: Dockerfile.android
+    command: cp /app/platforms/android/build/outputs/apk/android-debug.apk /build
+    volumes:
+      - ".:/build"
 
   flashairwatch:
     build: flashair-sync-monitor-watcher
     environment:
-      - "FLASH_AIR_IP=${FLASH_AIR_IP}"
+      - FLASH_AIR_IP=${FLASH_AIR_IP}
     volumes:
-      - "${files}:/files"
+      - ${FILES_DIR}:/files
+    restart: always
