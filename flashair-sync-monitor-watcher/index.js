@@ -1,4 +1,4 @@
-const flashair = require("flashair")(process.env.FLASH_AIR_IP, "AP");
+const flashair = require("flashair2")(process.env.FLASH_AIR_IP, "AP");
 
 flashair.command.getUpdateStatus(status => {
   if (status) {
